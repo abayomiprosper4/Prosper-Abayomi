@@ -4,7 +4,6 @@ import { motion, type Variants } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  // Explicitly typing variants to fix transition compatibility issues
   const container: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -16,7 +15,6 @@ const Hero: React.FC = () => {
     }
   };
 
-  // Using a tuple cast for cubic-bezier array to satisfy Framer Motion's Easing type
   const item: Variants = {
     hidden: { y: 60, opacity: 0 },
     show: { y: 0, opacity: 1, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } }
@@ -24,7 +22,6 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden pt-20">
-      {/* Background Decorative Element */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.15, scale: 1.2 }}
@@ -75,7 +72,7 @@ const Hero: React.FC = () => {
             </motion.button>
             
             <motion.a 
-              href="#" // CV placeholder link
+              href="#"
               download="Prosper_Abayomi_CV.pdf"
               className="group relative flex items-center gap-3 px-6 py-4 rounded-full border border-white/20 hover:border-white transition-all duration-300"
               whileHover={{ scale: 1.02 }}
@@ -86,8 +83,6 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
       </motion.div>
-
-      {/* Infinite Scrolling Text (Marquee) */}
       <div className="absolute bottom-20 left-0 w-full overflow-hidden whitespace-nowrap opacity-10 pointer-events-none select-none">
         <motion.div 
           animate={{ x: ["0%", "-50%"] }}
@@ -98,8 +93,6 @@ const Hero: React.FC = () => {
           Frontend Engineer • Social Media Manager • SaaS Construction • UI/UX Design • Prompt Engineering • &nbsp;
         </motion.div>
       </div>
-
-      {/* Visual Clip Simulation */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/4 h-1/2 opacity-20 hidden lg:block">
         <motion.div 
           animate={{ rotate: [0, 5, -5, 0], y: [0, 20, -20, 0] }}

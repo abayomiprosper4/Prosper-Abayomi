@@ -57,7 +57,7 @@ const About: React.FC = () => {
                  transition={{ duration: 0.5 }}
                >
                  <img 
-                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
+                   src="public/profilepic2.jpeg" 
                    alt="Prosper Abayomi" 
                    className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
                  />
