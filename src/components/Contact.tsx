@@ -6,6 +6,8 @@ import LinkedinIcon from "../assets/linkedin.svg?react";
 import XIcon from "../assets/x.svg?react";
 
 const Contact: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section id="contact" className="py-32 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto border-t border-white/10 pt-32">
@@ -85,7 +87,7 @@ const Contact: React.FC = () => {
 
       <div className="mt-32 text-center">
         <p className="text-[10px] uppercase tracking-[0.5em] text-white/20">
-          © 2024 Prosper Abayomi — All Rights Reserved
+          © <span className="text-white">{currentYear}</span> Prosper Abayomi — All Rights Reserved
         </p>
       </div>
     </section>

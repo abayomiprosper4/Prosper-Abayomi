@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PROJECTS } from '../../constants';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Download } from 'lucide-react'; 
 
 const Work: React.FC = () => {
   return (
@@ -28,29 +27,52 @@ const Work: React.FC = () => {
             className="group cursor-none"
             data-cursor="pointer"
           >
-            <div className="relative aspect-[16/11] overflow-hidden rounded-[2.5rem] bg-zinc-900 mb-10 border border-white/5">
-              <motion.img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex flex-col items-center justify-center gap-4">
-                 <motion.div 
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  className="px-8 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-2"
-                 >
-                   View Detail <ExternalLink className="w-3 h-3" />
-                 </motion.div>
+            {/* The Image Container - Wrap this in an anchor tag to make it clickable */}
+            <a 
+              href={project.downloadUrl || project.link} 
+              target={project.downloadUrl ? "_self" : "_blank"} 
+              rel="noopener noreferrer"
+              download={project.downloadUrl ? (project.fileName || true) : undefined}
+              className="block"
+            >
+              <div className="relative aspect-[16/11] overflow-hidden rounded-[2.5rem] bg-zinc-900 mb-10 border border-white/5">
+                <motion.img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+                />
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex flex-col items-center justify-center gap-4">
+                  <motion.div 
+                    initial={{ y: 20, opacity: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    className="px-8 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-2"
+                  >
+                    {project.downloadUrl ? (
+                      <>Download File <Download className="w-3 h-3" /></>
+                    ) : (
+                      <>View Project <ExternalLink className="w-3 h-3" /></>
+                    )}
+                  </motion.div>
+                </div>
               </div>
-            </div>
+            </a>
             
             <div className="flex flex-col gap-4">
               <div className="flex justify-between items-baseline">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-blue-500 font-bold">{project.category}</p>
                 <span className="text-[10px] text-white/20 font-mono">0{index + 1}</span>
               </div>
-              <h4 className="text-3xl font-bold tracking-tight group-hover:text-blue-500 transition-colors">{project.title}</h4>
+              
+              {/* Also made the Title clickable */}
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <h4 className="text-3xl font-bold tracking-tight group-hover:text-blue-500 transition-colors">
+                  {project.title}
+                </h4>
+              </a>
+              
               <p className="text-white/50 text-base leading-relaxed max-w-lg">
                 {project.description}
               </p>
@@ -59,15 +81,7 @@ const Work: React.FC = () => {
         ))}
       </div>
       
-      <div className="mt-32 flex justify-center">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-12 py-5 rounded-full border border-white/10 text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-white hover:text-black transition-all duration-500"
-        >
-          View More Projects
-        </motion.button>
-      </div>
+      {/* ... "View More" button ... */}
     </section>
   );
 };

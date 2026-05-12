@@ -6,6 +6,8 @@ export interface Project {
   image: string;
   link: string;
   description: string;
+  downloadUrl?: string;
+  fileName?: string;   
 }
 
 export interface Service {

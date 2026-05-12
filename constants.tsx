@@ -8,33 +8,35 @@ export const PROJECTS: Project[] = [
     id: '1',
     title: 'Automated Course Allocation',
     category: 'Full-Stack / Research',
-    image: 'https://picsum.photos/seed/course/1200/800',
-    link: '#',
+    image: '/Screenshot 2026-05-12 115031.png',
+    link: 'https://cbaas-ivory.vercel.app/',
     description: 'An intelligent system designed to automate the complex process of allocating courses to university lecturers.'
   },
   {
     id: '2',
-    title: 'NITHub Interactive UI',
-    category: 'Frontend Engineering',
-    image: 'https://picsum.photos/seed/nithub/1200/800',
-    link: '#',
-    description: 'Building high-performance, interactive user interfaces and web applications for NITDA Hub.'
+    title: 'Landing Page for Sustainable Cleaning',
+    category: 'Landing Page / Frontend',
+    image: '/Screenshot 2026-02-17 161706.png',
+    link: 'https://be-clean-webpage.vercel.app/',
+    description: 'Building high-performance, interactive user interfaces and web applications for clients.'
   },
   {
     id: '3',
-    title: 'Vanilla Concierge Strategy',
-    category: 'Social Media Management',
-    image: 'https://picsum.photos/seed/vanilla/1200/800',
-    link: '#',
+    title: 'Stylized Online Shopping Experience',
+    category: 'E-Commerce',
+    image: '/Screenshot 2026-02-17 162214.png',
+    link: 'https://verno-peach.vercel.app/',
     description: '360° content strategy and community management for luxury brand advertising.'
   },
   {
     id: '4',
-    title: 'Prompt Engineering Study',
-    category: 'AI Research',
+    title: 'Allocation Automation Study',
+    category: ' Research',
     image: 'https://picsum.photos/seed/ai/1200/800',
-    link: '#',
-    description: 'Deep dive into the intrinsic workings and structure of prompt engineering for LLMs.'
+    link: '/Project Report.pdf',
+    downloadUrl: '/Project Report.pdf',
+    fileName: 'Course_Allocation_Study.pdf',
+    description: 'Deep dive into the intrinsic workings and structure of Javascript in building Mathematical Models.'
   }
 ];
 

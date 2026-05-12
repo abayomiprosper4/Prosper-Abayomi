@@ -26,7 +26,7 @@ const About: React.FC = () => {
                   As a graduate from Bells University of Technology, I've spent my academic and early professional years mastering the art of building interactive UIs and constructs. I thrive in cross-functional teams, driving efficiency while solving complex client needs.
                 </p>
                 <p>
-                  My research interests currently lie in <span className="text-white">Prompt Engineering</span> and AI-based Web Development, exploring how we can evaluation maintainability in modern micro-frontend architectures.
+                  My research interests currently lie in <span className="text-white">Prompt Engineering</span> and <span className="text-white">AI-based Web Development</span>, exploring how we can evaluate maintainability and further improve user experience in modern micro-frontend architectures.
                 </p>
               </div>
 
