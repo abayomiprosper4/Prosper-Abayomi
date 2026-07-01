@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
           <div className="flex flex-col justify-end">
             <p className="text-2xl font-light text-white/60 mb-12 leading-relaxed">
-              I am currently available for selective freelance collaborations
+              I am currently available for selective collaborations
               and full-time opportunities with forward-thinking teams.
             </p>
 
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                 {
                   label: "X",
                   icon: <XIcon className="w-5 h-5 text-white" />,
-                  href: "#",
+                  href: "https://www.x.com/w0rld0f_p",
                 },
                 {
                   label: "Instagram",

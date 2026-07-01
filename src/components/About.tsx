@@ -18,15 +18,15 @@ const About: React.FC = () => {
               <h2 className="text-xs uppercase tracking-[0.5em] mb-12 text-white/40">Philosophy</h2>
               
               <div className="text-3xl md:text-5xl font-light leading-tight mb-12">
-                Eager to delve into the intersection of <span className="text-blue-500 font-bold italic">technology</span> and <span className="text-white font-medium">problem-solving</span>. I offer a solid foundation in <span className="text-white font-medium underline underline-offset-8 decoration-white/20">Computer Science</span>, logical reasoning, and SaaS development.
+                Eager to delve into the intersection of <span className="text-blue-500 font-bold italic">technology</span> and <span className="text-white font-medium">problem-solving</span>. I offer a solid foundation in <span className="text-white font-medium underline underline-offset-8 decoration-white/20">Computer Science</span>, logical reasoning, and structured development.
               </div>
 
               <div className="space-y-8 text-white/60 text-lg leading-relaxed max-w-2xl">
                 <p>
-                  As a graduate from Bells University of Technology, I've spent my academic and early professional years mastering the art of building interactive UIs and constructs. I thrive in cross-functional teams, driving efficiency while solving complex client needs.
+                  I've spent my academic and early professional years mastering the art of building interactive UIs and leveraging tools and technologies. I thrive in cross-functional teams, driving efficiency while solving complex client needs.
                 </p>
                 <p>
-                  My research interests currently lie in <span className="text-white">Prompt Engineering</span> and <span className="text-white">AI-based Web Development</span>, exploring how we can evaluate maintainability and further improve user experience in modern micro-frontend architectures.
+                  My research interests currently lie in <span className="text-white">Prompt Engineering</span> and <span className="text-white">AI-based Web Development</span>, exploring how we can evaluate maintainability, boost development capabilities, and further improve user experience in modern micro-frontend architectures.
                 </p>
               </div>
 
@@ -47,6 +47,27 @@ const About: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.15 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -4, scale: 1.01, borderColor: 'rgba(255,255,255,0.2)' }}
+                  className="mt-6 flex flex-col md:flex-row gap-4 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🎻</span>
+                    <div>
+                      <p className="text-sm italic leading-relaxed text-white/70">
+                        I also play the violin, a beautiful instrument that brings a solid understanding of music theory into my creative process.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="md:ml-auto flex items-center rounded-full border border-white/10 bg-gradient-to-br from-blue-500/10 to-transparent px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-white/40">
+                    #logic<span className="text-blue-500 font-bold">x</span>melody
+                  </div>
+                </motion.div>
               </div>
             </div>
 
@@ -57,7 +78,7 @@ const About: React.FC = () => {
                  transition={{ duration: 0.5 }}
                >
                  <img 
-                   src="public/profilepic2.jpeg" 
+                   src="/IMG_20260308_102015.jpg" 
                    alt="Prosper Abayomi" 
                    className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
                  />
