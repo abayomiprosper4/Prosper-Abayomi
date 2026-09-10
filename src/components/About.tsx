@@ -18,15 +18,15 @@ const About: React.FC = () => {
               <h2 className="text-xs uppercase tracking-[0.5em] mb-12 text-white/40">Philosophy</h2>
               
               <div className="text-3xl md:text-5xl font-light leading-tight mb-12">
-                Eager to delve into the intersection of <span className="text-blue-500 font-bold italic">technology</span> and <span className="text-white font-medium">problem-solving</span>. I offer a solid foundation in <span className="text-white font-medium underline underline-offset-8 decoration-white/20">Computer Science</span>, logical reasoning, and structured development.
+                Where  <span className="text-blue-500 font-bold italic">technology</span> meets <span className="text-white font-medium">problem-solving</span>, <span className="text-white font-medium underline underline-offset-8 decoration-white/20">I thrive</span>.
               </div>
 
               <div className="space-y-8 text-white/60 text-lg leading-relaxed max-w-2xl">
                 <p>
-                  I've spent my academic and early professional years mastering the art of building interactive UIs and leveraging tools and technologies. I thrive in cross-functional teams, driving efficiency while solving complex client needs.
+                  I've spent my academic and early professional years building interactive UIs and leveraging ever-changing tools and technologies. I thrive in cross-functional teams, driving efficiency while solving complex needs and adjusting to evolving industry demands.
                 </p>
                 <p>
-                  My research interests currently lie in <span className="text-white">Prompt Engineering</span> and <span className="text-white">AI-based Web Development</span>, exploring how we can evaluate maintainability, boost development capabilities, and further improve user experience in modern micro-frontend architectures.
+                  I have a major research interest in <span className="text-white">Systems Architecture</span> and <span className="text-white">AI-based Software Development</span>, exploring how we can evaluate maintainability, boost building capabilities, and improve the core development systems in modern micro-frontend architectures.
                 </p>
               </div>
 
@@ -60,7 +60,7 @@ const About: React.FC = () => {
                     <span className="text-2xl">🎻</span>
                     <div>
                       <p className="text-sm italic leading-relaxed text-white/70">
-                        I also play the violin, a beautiful instrument that brings a solid understanding of music theory into my creative process.
+                        I am also a music enthusiast, and majorly play the violin, a beautiful instrument, that brings a solid understanding of music theory and it's logical applications into my creative process.
                       </p>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ const About: React.FC = () => {
                  className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600/20 blur-3xl rounded-full -z-10" 
                />
                <div className="absolute -top-4 -right-4 text-xs font-bold tracking-widest text-blue-500 bg-white px-4 py-2 rounded-full transform rotate-12">
-                 BASED IN NIGERIA
+                 FACE OF THE BRAND
                </div>
             </div>
           </div>

@@ -43,11 +43,11 @@ const Hero: React.FC = () => {
       >
         <motion.div
           variants={item}
-          className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-white/5 border border-white/10"
+          className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
           <span className="text-[10px] uppercase tracking-[0.3em] text-white/60">
-            Available for collaboration
+            Hello, My name is,
           </span>
         </motion.div>
 
@@ -63,60 +63,78 @@ const Hero: React.FC = () => {
 
         <motion.div variants={item} className="max-w-2xl">
           <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light mb-10">
-            Software Engineer | UX Architect. Merging high-end frontend
+            Software Solutions Specialist | UX Architect. Merging high-end frontend
             precision with strategic design thinking processes.
           </p>
 
-          <div className="flex flex-wrap gap-6 items-center">
-            <motion.button
-              whileHover="hover"
-              className="relative group px-8 py-4 bg-white font-bold rounded-full text-xs uppercase tracking-widest overflow-hidden"  
-            >
-              <motion.div
-                variants={{ hover: { x: "100%" } }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.6, 0.01, -0.05, 0.95] as [number, number, number, number,],
-                }}
-                className="absolute inset-0 bg-black/95 -translate-x-full group-hover:translate-x-0"
-              />
-              <motion.a
-                href="#"
-                download="Prosper_Abayomi_CV.pdf"
-                className="group relative flex items-center gap-3 rounded-full text-white transition-all duration-300 text-black group-hover:text-black"
-                whileHover={{ scale: 1.02 }}
-              >
-                <Download />
-                <span className="text-xs uppercase tracking-widest font-semibold group-hover:text-black">
-                  Download CV
-                </span>
-              </motion.a>
-            </motion.button>
-            <motion.button
-              whileHover="hover"
-              className="relative group px-8 py-4 bg-white font-bold rounded-full text-xs uppercase tracking-widest overflow-hidden"
-            >
-              <motion.div
-                variants={{ hover: { x: "100%" } }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.6, 0.01, -0.05, 0.95] as [number, number, number, number,],
-                }}
-                className="absolute inset-0 bg-black/95 -translate-x-full group-hover:translate-x-0"
-              />
-              <motion.a
-                href="#"
-                download="prosper_resume.pdf"
-                className="group relative flex items-center gap-3 rounded-full text-white transition-all duration-300 text-black group-hover:text-black"
-                whileHover={{ scale: 1.02 }}
-              >
-                <Download />
-                <span className="text-xs uppercase tracking-widest font-semibold group-hover:text-black">
-                  My Resume
-                </span>
-              </motion.a>
-            </motion.button>
-          </div>
+<div className="flex flex-wrap gap-6 items-center">
+  <motion.button
+    initial="initial"
+    whileHover="hover"
+    className="relative group px-8 py-4 bg-black/95 font-bold rounded-full text-xs uppercase tracking-widest overflow-hidden"
+  >
+    <motion.div
+      variants={{
+        initial: { x: "-100%" },
+        hover: { x: "0%" },
+      }}
+      transition={{
+        duration: 0.5,
+        ease: [0.6, 0.01, -0.05, 0.95] as [
+          number,
+          number,
+          number,
+          number,
+        ],
+      }}
+      className="absolute inset-0 bg-white"
+    />
+    <motion.a
+      href="#"
+      download="Prosper_Abayomi_CV.pdf"
+      className="relative z-10 flex items-center gap-3 rounded-full text-white transition-colors duration-300 group-hover:text-black"
+      whileHover={{ scale: 1.02 }}
+    >
+      <Download />
+      <span className="text-xs uppercase tracking-widest font-semibold">
+        Download CV
+      </span>
+    </motion.a>
+  </motion.button>
+  <motion.button
+    initial="initial"
+    whileHover="hover"
+    className="relative group px-8 py-4 bg-black/95 font-bold rounded-full text-xs uppercase tracking-widest overflow-hidden"
+  >
+    <motion.div
+      variants={{
+        initial: { x: "-100%" },
+        hover: { x: "0%" },
+      }}
+      transition={{
+        duration: 0.5,
+        ease: [0.6, 0.01, -0.05, 0.95] as [
+          number,
+          number,
+          number,
+          number,
+        ],
+      }}
+      className="absolute inset-0 bg-white"
+    />
+    <motion.a
+      href="#"
+      download="main_resume.pdf"
+      className="relative z-10 flex items-center gap-3 rounded-full text-white transition-colors duration-300 group-hover:text-black"
+      whileHover={{ scale: 1.02 }}
+    >
+      <Download />
+      <span className="text-xs uppercase tracking-widest font-semibold">
+        My Resume
+      </span>
+    </motion.a>
+  </motion.button>
+</div>
         </motion.div>
       </motion.div>
       <div className="absolute bottom-20 left-0 w-full overflow-hidden whitespace-nowrap opacity-10 pointer-events-none select-none">
@@ -126,8 +144,8 @@ const Hero: React.FC = () => {
           className="inline-block text-[8vh] font-bold uppercase tracking-tighter"
         >
           Frontend Engineer • Social Media Manager • SaaS Construction • UI/UX
-          Design • Prompt Engineering • &nbsp; Frontend Engineer • Social Media
-          Manager • SaaS Construction • UI/UX Design • Prompt Engineering •
+          Design • Systems Engineering • &nbsp; Frontend Engineer • Social Media
+          Manager • SaaS Construction • UI/UX Design • Systems Engineering •
           &nbsp;
         </motion.div>
       </div>

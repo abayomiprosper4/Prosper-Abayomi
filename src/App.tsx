@@ -1,13 +1,12 @@
-
-import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Work from './components/Work';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import CustomCursor from './components/CustomCursor';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Work from "./components/Work";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import CustomCursor from "./components/CustomCursor";
+import { motion, AnimatePresence } from "framer-motion";
 
 const App: React.FC = () => {
   // Page load sequence
@@ -18,7 +17,7 @@ const App: React.FC = () => {
   return (
     <div className="relative bg-[#050505] text-white selection:bg-blue-500 selection:text-white">
       <CustomCursor />
-      
+
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0 }}
@@ -26,18 +25,53 @@ const App: React.FC = () => {
           transition={{ duration: 1 }}
         >
           <Navbar />
-          
+
           <main>
-            <Hero />
-            <About />
-            <Work />
-            <Services />
-            <Contact />
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <Hero />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <About />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <Work />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <Services />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <Contact />
+            </motion.div>
           </main>
 
           {/* Noise Overlay for Texture */}
           <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[9998] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-          
+
           {/* Subtle Ambient Light */}
           <div className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
             <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/10 blur-[150px] rounded-full"></div>
