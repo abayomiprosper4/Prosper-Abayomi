@@ -6,6 +6,7 @@ import Work from "./components/Work";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import CustomCursor from "./components/CustomCursor";
+import ChatAssistant from "./components/ChatAssistant";
 import { motion, AnimatePresence } from "framer-motion";
 
 const App: React.FC = () => {
@@ -68,6 +69,8 @@ const App: React.FC = () => {
               <Contact />
             </motion.div>
           </main>
+
+          <ChatAssistant />
 
           {/* Noise Overlay for Texture */}
           <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[9998] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>

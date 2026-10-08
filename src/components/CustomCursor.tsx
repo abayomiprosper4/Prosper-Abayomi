@@ -1,6 +1,5 @@
-
-import React, { useEffect, useState } from 'react';
-import { motion, useSpring, useMotionValue } from 'framer-motion';
+import React, { useEffect, useState } from "react";
+import { motion, useSpring, useMotionValue } from "framer-motion";
 
 const CustomCursor: React.FC = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -18,53 +17,54 @@ const CustomCursor: React.FC = () => {
     };
 
     const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        target.tagName === 'A' || 
-        target.tagName === 'BUTTON' || 
-        target.closest('button') || 
-        target.closest('a') ||
-        target.getAttribute('data-cursor') === 'pointer'
-      ) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
+      if (!(e.target instanceof Element)) return;
+
+      setIsHovering(
+        Boolean(
+          e.target.closest(
+            'a, button, input, textarea, select, [role="button"], [contenteditable="true"], [data-cursor="pointer"]',
+          ),
+        ),
+      );
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseover", handleMouseOver);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseover', handleMouseOver);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseover", handleMouseOver);
     };
   }, [mouseX, mouseY]);
 
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-white/40 rounded-full pointer-events-none z-[9999] flex items-center justify-center"
+        className="fixed top-0 left-0 w-8 h-8 border border-white/40 rounded-full pointer-events-none z-[2147483647] flex items-center justify-center"
         style={{
           x: cursorX,
           y: cursorY,
-          translateX: '-50%',
-          translateY: '-50%',
+          translateX: "-50%",
+          translateY: "-50%",
         }}
         animate={{
           scale: isHovering ? 2.5 : 1,
-          backgroundColor: isHovering ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0)',
-          borderColor: isHovering ? 'rgba(255, 255, 255, 0.8)' : 'rgba(255, 255, 255, 0.4)',
+          backgroundColor: isHovering
+            ? "rgba(255, 255, 255, 0.1)"
+            : "rgba(255, 255, 255, 0)",
+          borderColor: isHovering
+            ? "rgba(255, 255, 255, 0.8)"
+            : "rgba(255, 255, 255, 0.4)",
         }}
         transition={{ duration: 0.2 }}
       />
       <motion.div
-        className="fixed top-0 left-0 w-1 h-1 bg-white rounded-full pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-1 h-1 bg-white rounded-full pointer-events-none z-[2147483647]"
         style={{
           x: mouseX,
           y: mouseY,
-          translateX: '-50%',
-          translateY: '-50%',
+          translateX: "-50%",
+          translateY: "-50%",
         }}
       />
     </>
